@@ -1,4 +1,4 @@
-# Small Agent Code
+# Small Agent Code with Prompt-Caching
 
 A **proof of concept** demonstrating Anthropic's prompt caching with LangGraph agents to reduce API costs and improve response times.
 
