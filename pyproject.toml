@@ -1,0 +1,50 @@
+[project]
+name = "small-agent-code"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13.2"
+dependencies = [
+    "langchain>=0.3.27",
+    "langchain-anthropic>=0.3.18",
+    "langchain-openai>=0.3.28",
+    "langgraph>=0.6.2",
+    "streamlit>=1.47.1",
+]
+
+[tool.ruff]
+line-length = 128
+indent-width = 2
+lint.select = ["E1", "E4", "E7", "E9", "F", "W2", "I"]
+lint.ignore = ["T201", "D400", "D415", "INP001", "ERA001", "RET504"]
+
+[tool.pyright]
+pythonVersion = "3.13"
+typeCheckingMode = "strict"
+exclude = ["**/__pycache__", ".venv"]
+reportMissingImports = true
+reportMissingTypeStubs = false
+reportGeneralTypeIssues = true
+reportOptionalMemberAccess = true
+reportOptionalCall = true
+reportOptionalIterable = true
+reportOptionalContextManager = true
+reportOptionalOperand = true
+reportArgumentType = true
+reportAttributeType = true
+reportParameterType = true
+reportReturnAnnotation = true
+reportUnknownParameterType = true
+reportUnknownReturnType = true
+reportUnknownVariableType = true
+reportTypedDictNotRequiredAccess = false
+reportUnusedImport = "warning"
+reportIncompatibleMethodOverride = true
+reportIncompatibleVariableOverride = true
+reportCallInDefaultInitializer = false
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.7",
+    "types-requests>=2.32.4.20250611",
+]
