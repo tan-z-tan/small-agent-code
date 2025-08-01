@@ -1,10 +1,13 @@
-# Small Agent Code
+# Small Agent Code with Prompt-Caching
 
 A **proof of concept** demonstrating Anthropic's prompt caching with LangGraph agents to reduce API costs and improve response times.
 
 ## Overview
 
 This PoC shows how to implement prompt caching in AI agents using Anthropic's Claude. The key innovation is in the `inject_cache_control` function (agent.py:64-90) that adds cache control metadata to messages, reducing costs by up to 90% for repeated prompts.
+
+<img width="1979" height="1179" alt="Cumulative Cost over 20 Turns for Claude Sonnet 4 (With Cache Write on Turn 1)" src="https://github.com/user-attachments/assets/95158b0a-3d65-486e-8423-6afb8c31b4ac" />
+
 
 ## Key Implementation
 
